@@ -12,6 +12,8 @@ metadata:
 
 **入口文件命名约定**：所有子域的说明文件统一叫 `GUIDE.md` 而不是 `SKILL.md`——这是构建时有意为之，避免宿主把每个子域递归发现成独立 skill。找某个子域的详细说明时，读对应目录下的 **`GUIDE.md`**；子域之间的内部引用（如 `../lark-shared/GUIDE.md`）已同步改写，均可解析。
 
+**不要安装 lark-cli，默认请直接使用 `npx @larksuite/cli@latest`。**
+
 ## How to use
 
 1. 先在下方路由表中匹配任务所属子域。
@@ -51,9 +53,3 @@ metadata:
 | [lark-openapi-explorer](./references/subskills/lark-openapi-explorer/GUIDE.md) | 兜底：现有子域和已注册命令都满足不了时，从官方文档库挖掘并调用未封装的原生 OpenAPI |
 | [lark-skill-maker](./references/subskills/lark-skill-maker/GUIDE.md) | 把飞书 API 操作封装成可复用的自定义 Skill（包装原子 API 或编排多步流程） |
 | [lark-apps](./references/subskills/lark-apps/GUIDE.md) | 妙搭 Spark/Miaoda：应用创建、全栈开发、云端部署发布、UI mockup/原型/deck 设计、日志监控、环境变量、协作者与角色管理、自动化触发器 |
-
-## 边界与扩展
-
-- 本表覆盖上游 `larksuite/cli` 仓库的全部 `lark-*` 子域；但**本地是否安装**取决于 home-manager 配置（`~/.config/home-manager/skills/source.local.nix` 中该条目的 `skills` 列表）。指向未安装子域时，在该条目补一行 `{ dir = "skills/lark-<域>"; }` 再 switch 即可。
-- 上游新增子域后需手动同步本表；`update` 刷 rev 不会发现结构变化。
-- 非 Lark 的字节内部平台走 `bytedcli`，不要用本 skill 路由。
