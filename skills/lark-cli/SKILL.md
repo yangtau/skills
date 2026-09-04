@@ -14,6 +14,8 @@ metadata:
 
 **不要安装 lark-cli，默认请直接使用 `npx @larksuite/cli@latest`。**
 
+本 skills 依赖 https://github.com/larksuite/cli 中所有子 skills.
+
 ## How to use
 
 1. 先在下方路由表中匹配任务所属子域。
