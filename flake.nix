@@ -71,12 +71,22 @@
       # references/subskills/ of this repo's router (skills/lark-cli).
       # Agent hosts discover nested SKILL.md files as standalone skills, so the
       # sub-skill entry points are renamed to GUIDE.md and references rewritten.
+      # Inputs are narrowed with builtins.path so unrelated commits (here or
+      # upstream) don't change the hash and force a rebuild.
+      larkCliUpstream = builtins.path {
+        path = lark-cli + "/skills";
+        name = "lark-cli-upstream-skills";
+      };
+      larkCliRouter = builtins.path {
+        path = ./skills/lark-cli;
+        name = "lark-cli-router";
+      };
       larkCliSkill =
         pkgs:
-        pkgs.runCommand "lark-cli-skill" { } ''
+        pkgs.runCommandLocal "lark-cli-skill" { } ''
           dest="$out/references/subskills"
           mkdir -p "$dest"
-          cp -R ${lark-cli}/skills/lark-*/ "$dest/"
+          cp -R ${larkCliUpstream}/lark-*/ "$dest/"
           chmod -R u+w "$dest"
           find "$dest" -name SKILL.md -execdir mv {} GUIDE.md \;
           grep -rl 'SKILL\.md' "$dest" --include='*.md' \
@@ -84,7 +94,7 @@
           # plugin-guide lives outside this tree at runtime; its real file name is SKILL.md.
           grep -rl 'plugin-guide/GUIDE\.md' "$dest" --include='*.md' \
             | xargs -r sed -i 's#plugin-guide/GUIDE\.md#plugin-guide/SKILL.md#g'
-          cp -R ${self + "/skills/lark-cli"}/. "$out/"
+          cp -R ${larkCliRouter}/. "$out/"
         '';
 
       mkSkills =
