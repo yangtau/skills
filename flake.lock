@@ -1,0 +1,61 @@
+{
+  "nodes": {
+    "lark-cli": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793590053,
+        "narHash": "sha256-tx1Tg/OTWhRI/pUCaFJdgKa+4NVveR+tgm4QpH69GvI=",
+        "owner": "larksuite",
+        "repo": "cli",
+        "rev": "f31194b461afbd75479d12850b0f9cb9427cb762",
+        "type": "github"
+      },
+      "original": {
+        "owner": "larksuite",
+        "repo": "cli",
+        "type": "github"
+      }
+    },
+    "mattpocock": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793456610,
+        "narHash": "sha256-3vhd77xfZjKUYJsIwPFevIZPUAzUgZXr0RYj5NQrBwk=",
+        "owner": "mattpocock",
+        "repo": "skills",
+        "rev": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mattpocock",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1793341285,
+        "narHash": "sha256-Y1CiZ4SoBUjLQyQM/pY+rS2dXD3CHLPstF0lmOc73D4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1c89083e451e891152365b799595cf7790a43325",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "lark-cli": "lark-cli",
+        "mattpocock": "mattpocock",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,0 +1,51 @@
+name: Update flake inputs
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-flake
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@630ae543ea3a38a9a4166f03376c02c50f408342 # v31.11.0
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ github.token }}
+
+      - name: Update flake inputs
+        run: nix flake update
+
+      - name: Build all skills
+        run: nix build .#default --print-build-logs
+
+      - name: Commit and update main
+        run: |
+          git add flake.lock
+
+          if git diff --cached --quiet; then
+            echo "No updates available."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update flake inputs"
+          git pull --rebase origin main
+          git push origin HEAD:main
