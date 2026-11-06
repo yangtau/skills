@@ -3,11 +3,11 @@
     "lark-cli": {
       "flake": false,
       "locked": {
-        "lastModified": 1793802371,
-        "narHash": "sha256-9QRpUgsoUSCArlXMh8dRaVIeqV+HtTgoUuxI9uZvhRY=",
+        "lastModified": 1793892721,
+        "narHash": "sha256-VRqJV8iYgbjZXwy4MykUbfskLQdCsqEi4n152H0TIvE=",
         "owner": "larksuite",
         "repo": "cli",
-        "rev": "8d8357d39dd15ac5e9aa815d4ab2639d56bd3239",
+        "rev": "05ac58ffa089fe7a171205ac1d1e97ee50196ec8",
         "type": "github"
       },
       "original": {
