@@ -35,7 +35,7 @@ metadata:
 | [lark-whiteboard](./references/subskills/lark-whiteboard/GUIDE.md) | 画板：导出预览图或原始节点结构、多种格式更新画板内容 |
 | [lark-calendar](./references/subskills/lark-calendar/GUIDE.md) | 日历：查看/搜索/创建/更新日程、管理参会人、查询忙闲与推荐时段、预定会议室、预约会议 |
 | [lark-meeting](./references/subskills/lark-meeting/GUIDE.md) | 视频会议、妙记、智能纪要的总入口：历史会议记录与产物（纪要/逐字稿/妙记）、妙记搜索/上传/下载/编辑、进行中会议与会中内容、会中聊天/表情、机器人入会；meeting_id / meeting_no / event_id / note_id / minute_token / 妙记 URL（预约会议、忙闲、会议室归 lark-calendar） |
-| lark-minutes / lark-note / lark-vc / lark-vc-agent | 旧名，仅在用户显式点名时读对应 `references/subskills/<名>/GUIDE.md`；其余情况走 lark-meeting |
+| [lark-note](./references/subskills/lark-note/GUIDE.md) | 兼容旧名：仅当用户或上游配置显式指定 lark-note 时使用；否则走 lark-meeting |
 | [lark-mail](./references/subskills/lark-mail/GUIDE.md) | 邮箱：起草/发送/回复/转发邮件、查阅搜索邮件、文件夹、标签、联系人、收信规则、监听新邮件 |
 | [lark-task](./references/subskills/lark-task/GUIDE.md) | 任务：创建待办、更新状态、子任务拆分、清单组织、协作成员、附件、任务智能体注册与主页数据 |
 | [lark-okr](./references/subskills/lark-okr/GUIDE.md) | OKR：周期、目标、关键结果、对齐关系、量化指标、进展记录的查看与编辑 |
