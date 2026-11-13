@@ -3,11 +3,11 @@
     "lark-cli": {
       "flake": false,
       "locked": {
-        "lastModified": 1794311977,
-        "narHash": "sha256-MU99dRgey9VtVXfXx1vVVnK2ysk5HEE/65w8hvy2PZI=",
+        "lastModified": 1794482347,
+        "narHash": "sha256-GpdjcF/gT6FBnCOtUB+gSnp+IvtfWtDhTa97NqyRcgg=",
         "owner": "larksuite",
         "repo": "cli",
-        "rev": "ac22a60a23d66c37d43a7ec6d9e99b99a4320356",
+        "rev": "05e9c6ef74290f78601892ed9eb8a6389d8fc8ca",
         "type": "github"
       },
       "original": {
@@ -19,11 +19,11 @@
     "mattpocock": {
       "flake": false,
       "locked": {
-        "lastModified": 1793456610,
-        "narHash": "sha256-3vhd77xfZjKUYJsIwPFevIZPUAzUgZXr0RYj5NQrBwk=",
+        "lastModified": 1794472958,
+        "narHash": "sha256-AYSRCvBL8TDDdW3rgKu2T7gl4YYDoDId0jYbabEFyfs=",
         "owner": "mattpocock",
         "repo": "skills",
-        "rev": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+        "rev": "5863806dd4e15c63174bee4e7515a4256792ecfa",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794192123,
-        "narHash": "sha256-SvB8u5qaJAOwZZyZciqTVOg/rBoUs2w0sFTU6ED51AQ=",
+        "lastModified": 1794386569,
+        "narHash": "sha256-x9sADJvoVG0L6RejZB+/BB4YiGZFBZrfTlhF4uBq1tQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "177d0540942fb205af6993b1d5fa0b57799e09f8",
+        "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
         "type": "github"
       },
       "original": {
