@@ -3,11 +3,11 @@
     "lark-cli": {
       "flake": false,
       "locked": {
-        "lastModified": 1794986192,
-        "narHash": "sha256-xYFZv8KgejINNStbmKGFDJzYoJU0rwxwwDQaXOJultw=",
+        "lastModified": 1794986705,
+        "narHash": "sha256-ESXRBwCCMpDOpDZ3sQpZV6duaV5lALAk4DYdRBUsKHI=",
         "owner": "larksuite",
         "repo": "cli",
-        "rev": "baa9bdf7673a17df0eaef6c57ed4558026905890",
+        "rev": "c5fbf1a52df77d5cb9cac2b1501770b2fb9af7d2",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794750194,
-        "narHash": "sha256-c6ZxSsG1c2luSrbESFfp9Jq2pSVhGst2to4aIzt2Nes=",
+        "lastModified": 1794890597,
+        "narHash": "sha256-lME2lHoDHAaSHP3/okgiVoJ0icVEvsQH8LeU3We7tcc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1a08097fc1ed85575db39763b2c4a5d8970a37ba",
+        "rev": "04906337b6d53e8bb0eaf0470ae9f070a4d4eb55",
         "type": "github"
       },
       "original": {
