@@ -14,11 +14,11 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      lark-cli,
-      mattpocock,
+    { self
+    , nixpkgs
+    , lark-cli
+    , mattpocock
+    ,
     }:
     let
       systems = [
@@ -31,40 +31,12 @@
 
       # Skills from this repository.
       ownSkills = [
-        "fix-todos"
         "simplify"
       ];
 
       # Skills picked from mattpocock/skills (dir relative to repo root; name = basename).
       mattpocockSkills = [
-        # call by user
-        # "skills/engineering/ask-matt"
-        # "skills/engineering/grill-with-docs"
-        # "skills/engineering/triage"
-        "skills/engineering/improve-codebase-architecture"
-        # "skills/engineering/setup-matt-pocock-skills"
-        # "skills/engineering/to-spec"
-        # "skills/engineering/to-tickets"
-        # "skills/engineering/implement"
-        # "skills/engineering/wayfinder"
-
-        # "skills/productivity/grill-me"
         "skills/productivity/handoff"
-        # "skills/productivity/wait-what"
-
-        # call by model
-        # "skills/engineering/prototype"
-        # "skills/engineering/diagnosing-bugs"
-        # "skills/engineering/research"
-        # "skills/engineering/tdd"
-        "skills/engineering/domain-modeling"
-        "skills/engineering/codebase-design"
-        "skills/engineering/retro"
-        # "skills/engineering/code-review"
-        # "skills/engineering/wizard"
-
-        "skills/productivity/grilling"
-        "skills/productivity/writing-for-agents"
       ];
 
       # lark-cli: every upstream skills/lark-* sub-skill is copied under
